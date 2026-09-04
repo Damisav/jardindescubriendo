@@ -70,8 +70,16 @@
     <p>Estamos trabajando en la construcción de nuestra nueva plataforma web institucional.</p>
     <p class="contact">
       Si estás interesado/a en conocer DESCUBRIENDO, enviá un mensaje 
-      <a href="https://wa.me/5493415142530" target="_blank" rel="noopener noreferrer">acá</a>.
+      <a id="whatsapp-link" href="https://wa.me/5493415142530" target="_blank" rel="noopener noreferrer">acá</a>.
     </p>
   </div>
+  <script>
+    const whatsappLink = document.getElementById('whatsapp-link');
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (!isMobile) {
+      whatsappLink.href = 'https://web.whatsapp.com/send?phone=5493415142530';
+    }
+  </script>
 </body>
 </html>
